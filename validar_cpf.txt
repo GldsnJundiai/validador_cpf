@@ -1,0 +1,62 @@
+while True:
+  #valor fixo para multiplicação de cada digito
+  dig_0 = 10
+  dig_1 = 9
+  dig_2 = 8
+  dig_3 = 7
+  dig_4 = 6
+  dig_5 = 5
+  dig_6 = 4
+  dig_7 = 3
+  dig_8 = 2
+
+  #Variável para salvar a multiplicação do (input * valor fixo do digito)
+  mult_0 = 0
+  mult_1 = 0
+  mult_2 = 0
+  mult_3 = 0
+  mult_4 = 0
+  mult_5 = 0
+  mult_6 = 0
+  mult_7 = 0
+  mult_8 = 0
+  mult_9 = 0
+
+  soma_1 = 0
+  resto_div = 0
+  mult_10 = 0
+
+  cpf = input("Insira um CPF para consulta: ")
+
+  if len(cpf) > 11:
+    print("Número inválido. Digite sem pontos '.' ou traços '-' ")
+    continue
+  elif len(cpf) == 11:
+    mult_0 = dig_0 * int(cpf[0])
+    mult_1 = dig_1 * int(cpf[1])
+    mult_2 = dig_2 * int(cpf[2])
+    mult_3 = dig_3 * int(cpf[3])
+    mult_4 = dig_4 * int(cpf[4])
+    mult_5 = dig_5 * int(cpf[5])
+    mult_6 = dig_6 * int(cpf[6])
+    mult_7 = dig_7 * int(cpf[7])
+    mult_8 = dig_8 * int(cpf[8])
+
+    soma_1 = (mult_0 + mult_1 + mult_2 + mult_3 + mult_4 + mult_5 + mult_6 + mult_7 + mult_8 + mult_9)
+
+    mult_10 = soma_1 * 10
+
+    resto_div = mult_10 % 11
+
+    print("O resto da divisão é: ",resto_div)
+    print("O 1º número do digito é: ",cpf[9])
+
+    if (resto_div == int(cpf[9])):
+      print("CPF válido")
+    else:
+      print("CPF inválido")
+
+
+
+
+
